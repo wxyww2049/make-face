@@ -15,6 +15,37 @@ export default function Main() {
     }
     setImages(tmp);
   };
+
+  const getResize = () => {
+    return {
+      w1:
+        window.innerWidth > 1000
+          ? window.innerWidth * 0.4
+          : window.innerWidth * 0.7,
+
+      w2:
+        window.innerWidth > 1000
+          ? window.innerWidth * 0.4
+          : window.innerWidth * 0.7,
+      flg: window.innerWidth > 1000 ? 1 : 0,
+    };
+  };
+
+  const [size, setSize] = useState(getResize());
+
+  const handleResize = () => {
+    setSize(getResize());
+  };
+  useEffect(() => {
+    console.log(size);
+  }, [size]);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // return window.removeEventListener("resize", handleResize);
+  }, []);
+
   const updateImage = (index, url) => {
     const tmp = [...images];
     if (url === -1) {
@@ -45,19 +76,20 @@ export default function Main() {
           margin: "30px 30px 0px 30px",
         }}
       > */}
-      <ShowRes images={images} randomImage={randomImage} />
+      <ShowRes size={size} images={images} randomImage={randomImage} />
       {/* </div> */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "50%",
+          // width: "50%",
+          width: size.w2,
           marginLeft: "30px",
           marginTop: "30px",
-          minWidth: "400px",
+          // minWidth: "400px",
         }}
       >
-        <SelectPanel images={images} updateImage={updateImage} />
+        <SelectPanel size={size} images={images} updateImage={updateImage} />
       </div>
     </div>
   );

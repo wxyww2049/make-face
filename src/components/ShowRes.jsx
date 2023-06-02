@@ -5,27 +5,9 @@ import "./main.css";
 // import { rightHand } from "../constants/imageUrl";
 
 export default function ShowRes(props) {
-  const { images, randomImage } = props;
+  const { size, images, randomImage } = props;
 
   const resultDiv = useRef(null);
-
-  const getResize = () => {
-    return {
-      w1:
-        window.innerWidth > 1300
-          ? window.innerWidth * 0.4
-          : window.innerWidth * 0.7,
-
-      w2:
-        window.innerWidth > 1300
-          ? window.innerWidth * 0.4
-          : window.innerWidth * 0.7,
-    };
-  };
-
-  const [size, setSize] = useState(getResize());
-
-  // const images = imageUrl;
 
   useEffect(() => {
     const imagePaint = [];
@@ -47,19 +29,6 @@ export default function ShowRes(props) {
       };
     }
   }, [images, size]);
-  const handleResize = () => {
-    setSize(getResize());
-  };
-
-  useEffect(() => {
-    console.log(size);
-  }, [size]);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    // return window.removeEventListener("resize", handleResize);
-  }, []);
 
   const downloadPng = () => {
     const canvas = resultDiv.current;

@@ -4,37 +4,31 @@ import { bigimgUrl, imageName, imageUrl } from "../constants/imageUrl";
 import "./main.css";
 import syou3 from "../assets/01右手/_you3.jpg";
 export default function SelectPanel(props) {
+  const size = props.size;
+
   const [lid, setLid] = useState(0);
+
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: size.flg ? "row" : "column",
       }}
     >
       <div
         style={{
-          width: "200px",
+          width: size.flg ? "200px" : "auto",
           padding: "10px",
-          height: "600px",
+          // height: "600px",
+          height: size.flg ? size.w1 : "auto",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: size.flg ? "column" : "row",
           overflow: "auto",
         }}
         className="buttons"
       >
         {imageName.map((item, index) => {
           return (
-            // <div
-            //   style={{
-            //     marginBottom: "20px",
-            //     width: "200px",
-            //     display: "flex",
-            //     flexDirection: "row",
-            //     overflow: "auto",
-            //     height: "50px",
-            //   }}
-            // >
             <div
               style={{
                 display: "flex",
@@ -58,16 +52,18 @@ export default function SelectPanel(props) {
       </div>
       <div
         style={{
-          // width: "570px",
-          height: "600px",
-          width: "80%",
+          width: size.flg ? "570px" : "auto",
+          // height: "600px",
+          // width: "80%",
           display: "flex",
           flexDirection: "row",
           flexFlow: "wrap",
           overflow: "auto",
-          marginLeft: "20px",
+          // marginLeft: "20px",
+          marginTop: size.flg ? "0px" : "20px",
           alignContent: "flex-start",
-          marginLeft: "20px",
+          marginLeft: size.flg ? "20px" : "0px",
+          // justifyContent: "center",
           padding: "5px",
           // backgroundColor: "#f9f9f9",
         }}
@@ -76,8 +72,8 @@ export default function SelectPanel(props) {
           return (
             <div
               style={{
-                width: "100px",
-                height: "100px",
+                width: size.flg ? "100px" : "70px",
+                height: size.flg ? "100px" : "70px",
                 margin: "5px",
                 // margin: "10px",
                 backgroundColor:
@@ -93,17 +89,18 @@ export default function SelectPanel(props) {
                 // src={syou3}
                 alt={item}
                 style={{
-                  width: "100px",
-                  height: "100px",
+                  width: size.flg ? "100px" : "70px",
+                  height: size.flg ? "100px" : "70px",
                 }}
               />
             </div>
           );
         })}
+
         <div
           style={{
-            width: "100px",
-            height: "100px",
+            width: size.flg ? "100px" : "70px",
+            height: size.flg ? "100px" : "70px",
             margin: "5px",
             // margin: "10px",
             backgroundColor: "#f9f9f9",
@@ -119,12 +116,13 @@ export default function SelectPanel(props) {
             src={showNothing}
             // alt={item}
             style={{
-              width: "50px",
-              height: "50px",
+              width: size.flg ? "50px" : "35px",
+              height: size.flg ? "50px" : "35px",
             }}
           />
         </div>
       </div>
+      {!size.flg && <div style={{ height: "500px" }}></div>}
     </div>
   );
 }
