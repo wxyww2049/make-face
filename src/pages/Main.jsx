@@ -21,12 +21,12 @@ export default function Main() {
       w1:
         window.innerWidth > 1000
           ? window.innerWidth * 0.4
-          : window.innerWidth * 0.7,
+          : window.innerWidth * 0.9,
 
       w2:
         window.innerWidth > 1000
           ? window.innerWidth * 0.4
-          : window.innerWidth * 0.7,
+          : window.innerWidth * 0.9,
       flg: window.innerWidth > 1000 ? 1 : 0,
     };
   };
@@ -76,16 +76,18 @@ export default function Main() {
           margin: "30px 30px 0px 30px",
         }}
       > */}
-      <ShowRes size={size} images={images} randomImage={randomImage} />
+      <div style={{ width: size.flg ? "40%" : "90%" }}>
+        <ShowRes size={size} images={images} randomImage={randomImage} />
+      </div>
       {/* </div> */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           // width: "50%",
-          width: size.w2,
-          marginLeft: "30px",
-          marginTop: "30px",
+          width: size.flg ? "40%" : "90%",
+          // marginLeft: "30px",
+          marginTop: size.flg ? "30px" : "0px",
           // minWidth: "400px",
         }}
       >

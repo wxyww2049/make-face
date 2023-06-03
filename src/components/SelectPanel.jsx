@@ -24,6 +24,7 @@ export default function SelectPanel(props) {
           display: "flex",
           flexDirection: size.flg ? "column" : "row",
           overflow: "auto",
+          marginLeft: size.flg ? "20px" : "0px",
         }}
         className="buttons"
       >
@@ -34,11 +35,13 @@ export default function SelectPanel(props) {
                 display: "flex",
                 flexDirection: "column",
                 marginBottom: "5px",
+                // height: size.flg ? "auto" : "200px",
               }}
               className="buttons"
             >
               <button
                 type="button"
+                style={{ height: size.flg ? "auto" : "120px", margin: "5px" }}
                 className={index === lid ? "nes-btn is-primary" : "nes-btn"}
                 onClick={() => {
                   setLid(index);
@@ -53,7 +56,7 @@ export default function SelectPanel(props) {
       <div
         style={{
           width: size.flg ? "570px" : "auto",
-          // height: "600px",
+          height: size.flg ? size.w1 : "auto",
           // width: "80%",
           display: "flex",
           flexDirection: "row",
@@ -72,14 +75,15 @@ export default function SelectPanel(props) {
           return (
             <div
               style={{
-                width: size.flg ? "100px" : "70px",
-                height: size.flg ? "100px" : "70px",
+                // width: size.flg ? "100px" : "70px",
+                // height: size.flg ? "100px" : "70px",
                 margin: "5px",
                 // margin: "10px",
-                backgroundColor:
+                backgroundColor: "#f9f9f9",
+                border:
                   props?.images[lid + 1] == imageUrl[lid][index]
-                    ? "#d1f1b73b"
-                    : "#f9f9f9",
+                    ? "3px #4df738 solid"
+                    : "3px solid #ffffff00",
               }}
               className="imgElements"
               onClick={() => props.updateImage(lid + 1, imageUrl[lid][index])}

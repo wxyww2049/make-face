@@ -21,11 +21,3 @@
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
-.imgElements:hover{
-  box-shadow: 0 0 0 1px #209cee;
-  transform: scale(1.2);
-  transform-origin:0 0;
-}
-.imgElements {
-  transition: transform 0.3s ease-in-out;
-}
