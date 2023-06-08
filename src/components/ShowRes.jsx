@@ -3,15 +3,16 @@ import "./ShowRes.css";
 import "nes.css/css/nes.min.css";
 import "./main.css";
 // import { rightHand } from "../constants/imageUrl";
-
+import LoadingButton from "./LoadingButton";
 export default function ShowRes(props) {
   const { size, images, randomImage } = props;
   const [imgurl, setImagUrl] = useState("");
   const resultDiv = useRef(null);
-
+  const [ld, setLd] = useState(false);
   useEffect(() => {
+    setLd(false);
     const imagePaint = [];
-    console.log(images);
+    // console.log(images);
     const canvas = resultDiv.current;
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, 600, 600);
@@ -29,6 +30,7 @@ export default function ShowRes(props) {
 
           const img = canvas.toDataURL("image/png");
           setImagUrl(img);
+          setLd(true);
         }
       };
     }
@@ -58,16 +60,40 @@ export default function ShowRes(props) {
       <div style={{ display: "none" }}>
         <canvas width={600} height={600} ref={resultDiv}></canvas>
       </div>
-
-      <img
+      <div
         style={{
-          aspectRatio: 1 / 1,
-          margin: "20px 20px 0px 20px",
+          position: "relative",
+          marginBottom: "20px",
           width: "100%",
+          aspectRatio: 1 / 1,
         }}
-        alt={imgurl}
-        src={imgurl}
-      ></img>
+      >
+        <img
+          style={{
+            aspectRatio: 1 / 1,
+            margin: "20px 20px 0px 20px",
+            width: "100%",
+            // display: ld ? "flex" : "none",
+            position: "absolute",
+          }}
+          alt=""
+          src={imgurl}
+        ></img>
+        <div
+          style={{
+            position: "absolute",
+            aspectRatio: 1 / 1,
+            margin: "20px 20px 0px 20px",
+            width: "100%",
+            display: ld ? "none" : "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <LoadingButton />
+        </div>
+      </div>
+
       <div style={{ width: "100%" }}>
         <div style={{ display: "block", float: "right" }}>
           {/* <div flex={1}></div> */}

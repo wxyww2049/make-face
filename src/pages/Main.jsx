@@ -36,9 +36,6 @@ export default function Main() {
   const handleResize = () => {
     setSize(getResize());
   };
-  useEffect(() => {
-    console.log(size);
-  }, [size]);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
