@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import "./ShowRes.css";
 import "nes.css/css/nes.min.css";
 import "./main.css";
+import nothingImg from "../assets/nothing.png";
 // import { rightHand } from "../constants/imageUrl";
 import LoadingButton from "./LoadingButton";
 export default function ShowRes(props) {
   const { size, images, randomImage } = props;
-  const [imgurl, setImagUrl] = useState("");
+  const [imgurl, setImagUrl] = useState(nothingImg);
   const resultDiv = useRef(null);
   const [ld, setLd] = useState(false);
   useEffect(() => {
@@ -71,7 +72,7 @@ export default function ShowRes(props) {
         <img
           style={{
             aspectRatio: 1 / 1,
-            margin: "20px 20px 0px 20px",
+            // margin: "20px 20px 0px 20px",
             width: "100%",
             // display: ld ? "flex" : "none",
             position: "absolute",
@@ -83,7 +84,7 @@ export default function ShowRes(props) {
           style={{
             position: "absolute",
             aspectRatio: 1 / 1,
-            margin: "20px 20px 0px 20px",
+            // margin: "20px 20px 0px 20px",
             width: "100%",
             display: ld ? "none" : "flex",
             alignItems: "center",
