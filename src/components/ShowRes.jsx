@@ -64,7 +64,7 @@ export default function ShowRes(props) {
       <div
         style={{
           position: "relative",
-          marginBottom: "20px",
+          marginTop: "20px",
           width: "100%",
           aspectRatio: 1 / 1,
         }}
