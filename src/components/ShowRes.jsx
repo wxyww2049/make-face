@@ -66,16 +66,13 @@ export default function ShowRes(props) {
           position: "relative",
           marginTop: "20px",
           width: "100%",
-          aspectRatio: 1 / 1,
         }}
       >
         <img
           style={{
-            aspectRatio: 1 / 1,
             // margin: "20px 20px 0px 20px",
             width: "100%",
-            // display: ld ? "flex" : "none",
-            position: "absolute",
+            display: "block",
           }}
           alt=""
           src={imgurl}
@@ -83,9 +80,10 @@ export default function ShowRes(props) {
         <div
           style={{
             position: "absolute",
-            aspectRatio: 1 / 1,
             // margin: "20px 20px 0px 20px",
+            top: 0,
             width: "100%",
+            height: "100%",
             display: ld ? "none" : "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -95,12 +93,20 @@ export default function ShowRes(props) {
         </div>
       </div>
 
-      <div style={{ width: "100%" }}>
-        <div style={{ display: "block", float: "right" }}>
-          {/* <div flex={1}></div> */}
-          <p style={{ color: "red", marginBottom: "0px", marginTop: 5 }}>
-            *长按图片保存至相册
-          </p>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          fontSize: "0.9rem",
+          marginBottom: "10px",
+        }}
+      >
+        <div style={{ marginBottom: "0px", marginTop: 5 }}>
+          图片作者：亚琼@学生在线
+        </div>
+        <div style={{ flex: 1 }}></div>
+        <div style={{ color: "red", marginBottom: "0px", marginTop: 5 }}>
+          *长按图片保存至相册
         </div>
       </div>
       <div

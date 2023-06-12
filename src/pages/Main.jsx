@@ -31,17 +31,17 @@ export default function Main() {
     };
   };
 
-  const [size, setSize] = useState(getResize());
+  const [size, setSize] = useState(getResize);
 
-  const handleResize = () => {
-    setSize(getResize());
-  };
+  // const handleResize = () => {
+  //   setSize(getResize());
+  // };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
 
-    // return window.removeEventListener("resize", handleResize);
-  }, []);
+  //   // return window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const updateImage = (index, url) => {
     const tmp = [...images];
