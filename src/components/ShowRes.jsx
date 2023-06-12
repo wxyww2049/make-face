@@ -102,7 +102,7 @@ export default function ShowRes(props) {
         }}
       >
         <div style={{ marginBottom: "0px", marginTop: 5 }}>
-          图片作者：亚琼@学生在线
+          图片作者：李亚琼@学生在线
         </div>
         <div style={{ flex: 1 }}></div>
         <div style={{ color: "red", marginBottom: "0px", marginTop: 5 }}>
