@@ -71,14 +71,14 @@ const glass = [
   "https://face-image.sduonline.cn/621f3f02b1000000.png", // ../assets/06眼镜/jing2.png
   "https://face-image.sduonline.cn/621f3f02b3000000.png", // ../assets/06眼镜/jing3.png
   "https://face-image.sduonline.cn/621f3f02b3000001.png", // ../assets/06眼镜/jing4.png
-  "https://face-image.sduonline.cn/621f3f02b1c00000.png", // ../assets/06眼镜/jing5.png
+  //"https://face-image.sduonline.cn/621f3f02b1c00000.png", // ../assets/06眼镜/jing5.png
 ];
 const bigglass = [
   "https://img13.360buyimg.com/ddimg/jfs/t1/145580/40/32266/2354/647a1ba9F40a26916/6ae6071d5eefd949.jpg", // ../assets/缩略图/06眼镜/1.png
   "https://img13.360buyimg.com/ddimg/jfs/t1/212372/22/31839/2972/647a1ba9F09d3b5be/f3ef84d87bb50d13.jpg", // ../assets/缩略图/06眼镜/2.png
   "https://img13.360buyimg.com/ddimg/jfs/t1/119213/7/38959/2642/647a1ba9Fb0a67013/073e92641bb9a340.jpg", // ../assets/缩略图/06眼镜/3.png
   "https://img13.360buyimg.com/ddimg/jfs/t1/67532/34/25488/2397/647a1ba9Fd19e94dc/27acd8acbdedc1d8.jpg", // ../assets/缩略图/06眼镜/4.png
-  "https://img13.360buyimg.com/ddimg/jfs/t1/113612/13/36753/2699/647a1ba9Fc991d591/3ff1d7bd4afd812e.jpg", // ../assets/缩略图/06眼镜/5.png
+ // "https://img13.360buyimg.com/ddimg/jfs/t1/113612/13/36753/2699/647a1ba9Fc991d591/3ff1d7bd4afd812e.jpg", // ../assets/缩略图/06眼镜/5.png
 ];
 const liuhai = [
   "https://face-image.sduonline.cn/621f3f038b400001.png", // ../assets/07刘海/liuhai1.png
@@ -267,7 +267,7 @@ const bizi = [
   "https://face-image.sduonline.cn/621f3f0b6bc00007.png", // ../assets/12鼻子/be12.png
   "https://face-image.sduonline.cn/621f3f0b6c400001.png", // ../assets/12鼻子/be13.png
   "https://face-image.sduonline.cn/621f3f0b6c400003.png", // ../assets/12鼻子/be14.png
-  "https://face-image.sduonline.cn/621f3f0b6c400002.png", // ../assets/12鼻子/be15.png
+  //"https://face-image.sduonline.cn/621f3f0b6c400002.png", // ../assets/12鼻子/be15.png
 ];
 const bigbizi = [
   "https://img13.360buyimg.com/ddimg/jfs/t1/132667/1/34344/994/647a1bb2F7b9d1944/4fd06327a595f697.jpg", // ../assets/缩略图/12鼻子/1.png
@@ -284,7 +284,7 @@ const bigbizi = [
   "https://img13.360buyimg.com/ddimg/jfs/t1/99562/38/36741/1058/647a1bb3Fda79a8e3/eae71d2d82a7888c.jpg", // ../assets/缩略图/12鼻子/12.png
   "https://img13.360buyimg.com/ddimg/jfs/t1/156188/23/37263/1427/647a1bb3F110bea80/6d6dd7999b600356.jpg", // ../assets/缩略图/12鼻子/13.png
   "https://img13.360buyimg.com/ddimg/jfs/t1/173378/8/37740/1681/647a1bb3F529b08f0/2e2094d7c70b9d1b.jpg", // ../assets/缩略图/12鼻子/14.png
-  "https://img13.360buyimg.com/ddimg/jfs/t1/175865/26/33677/1809/647a1bb3Fd3b1e7e5/666f362665ad526c.jpg", // ../assets/缩略图/12鼻子/15.png
+  //"https://img13.360buyimg.com/ddimg/jfs/t1/175865/26/33677/1809/647a1bb3Fd3b1e7e5/666f362665ad526c.jpg", // ../assets/缩略图/12鼻子/15.png
 ];
 const lianxing = [
   "https://face-image.sduonline.cn/621f3f0cec000000.png", // ../assets/13脸型/lian1.png
